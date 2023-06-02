@@ -37,8 +37,8 @@ jobs:
           context: .
           push: true
           tags: noetic-torch-cpu
+          file: "noetic-torch-cpu.Dockerfile"
           labels: ${{ steps.meta.outputs.labels }}
-          file: {context}/noetic-torch-cpu.Dockerfile
 
       - name: Build and push Docker image (Noetic Torch GPU)
         uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
@@ -46,5 +46,5 @@ jobs:
           context: .
           push: true
           tags: noetic-torch-gpu-cuda117
+          file: "noetic-torch-gpu-cuda117.Dockerfile"
           labels: ${{ steps.meta.outputs.labels }}
-          file: {context}/noetic-torch-gpu-cuda117.Dockerfile
