@@ -36,7 +36,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:noetic-torch-cpu
+          tags: ${{ env.REGISTRY }}/${{ github.actor }}/${{ env.IMAGE_NAME }}:noetic-torch-cpu
           labels: ${{ steps.meta.outputs.labels }}
           file: "noetic-torch-cpu.Dockerfile"
 
@@ -45,6 +45,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:noetic-torch-gpu-cuda117
+          tags: ${{ env.REGISTRY }}/${{ github.actor }}/${{ env.IMAGE_NAME }}:noetic-torch-gpu-cuda117
           labels: ${{ steps.meta.outputs.labels }}
           file: "noetic-torch-gpu-cuda117.Dockerfile"
